@@ -1,0 +1,84 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+</head>
+
+<body>
+
+<nav class="btn-effect">
+		<a href="#"><span>Key to be part</span><span>Gateway to community</span></a>
+</nav>
+
+
+<form action="{{path_for('register_form_action')}}" method="POST" enctype="multipart/form-data" class="grid">
+
+<div class="grid_item">
+<div class="input_label">User Name *</div>
+<input type="text" name="user_name" class="input_box">
+<div class="error"></div>
+</div>
+
+
+<div class="grid_item item_pic_upload">
+<div class="image"><img src="{{ asset('/img/default_pic.jpg') }}"></div>
+<input type="file" name="profile_pic" accept="image" class="input_box" style="position: absolute; bottom: 0;"><br/>
+</div>
+
+<div class="grid_item">
+<div class="input_label">I am a</div>
+<select name="role_type" class="input_box">
+<option value="participant">Participant</option>
+<option value="coordinator">Coordinator</option>
+<option value="organisation">Organisation</option>
+</select>
+</div>
+
+<div class="grid_item full_part" >
+<div class="input_label">Phone Number *</div>
+<input type="text" name="phone_number" class="input_box">
+<div class="error"></div>
+</div>
+
+<div class="grid_item full_part" >
+<div class="input_label">Street Address *</div>
+<input type="text" name="street_address" class="input_box">
+<div class="error"></div>
+</div>
+
+<div class="grid_item">
+<div class="input_label">Area</div>
+<input type="text" name="area" class="input_box">
+</div>
+
+<div class="grid_item">
+<div class="input_label">Pin Code</div>
+<input type="number" name="pincode" class="input_box">
+</div>
+
+<div class="grid_item full_part">
+<div class="input_label">E-Mail *</div>
+<input type="email" name="user_email" class="input_box">
+<div class="error"></div>
+</div>
+
+<div class="grid_item">
+<div class="input_label">Password *</div>
+<input type="password" name="password" class="input_box">
+<div class="error"> </div>
+</div>
+
+<div class="grid_item">
+<div class="input_label">Confirm Password *</div>
+<input type="password" name="confpass" class="input_box"><br/>
+<div class="error"></div>
+</div>
+
+<div class="grid_item full_part" style="justify-content: center;">
+<button type="submit" name="logon" class="grid_item log_btn">Sign up</button>
+</div>
+
+</form>
+
+</body>
+</html>

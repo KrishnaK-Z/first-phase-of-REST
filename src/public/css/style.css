@@ -1,0 +1,207 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #e5e5e5;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to right, #a8ff78, #78ffd6);
+    font-family: "Segoe UI";
+}
+.grid
+{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    padding : 6.5rem 2rem 2rem;
+    transform:  translate(-50%,-50%) ;
+    display: grid;
+    grid-template-columns: repeat(2,280px);
+    background-color: #f4f5f7;
+    grid-row-gap: 2rem;
+    grid-column-gap: 1rem;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.05);
+    color: #a8aac5;
+    margin:  12rem 0 4rem;
+}
+
+.grid::after{
+    content: "Create an Account";
+    position: absolute;
+    display: block;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    font-size: 1.5em;
+    color: #155bda;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem 2rem;
+    font-weight: 100;
+}
+
+
+.grid_item
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.item_pic_upload
+{
+  grid-row: 1 / span 2;
+}
+
+.input_label
+{
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 0 0 0.5rem;
+}
+
+.input_box
+{
+    width: 100%;
+    height: 3rem;
+    border: none;
+    color:#155bda;
+    padding: 1rem;
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+}
+.input_box:focus{
+    border-color: #4facfe;
+    outline: none;
+}
+
+
+.full_part
+{
+    grid-column: 1 / span 2;
+}
+
+
+.log_btn
+{
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size:  1rem;
+    border : 0;
+    background-image: linear-gradient(to right, #a8ff78, #78ffd6);
+    border-radius: 30px;
+    color: #fff;
+    align-self: center;
+    cursor: pointer;
+    transition: background-image 0.3s;
+}
+.log_btn:hover{
+    background-image:linear-gradient(to right, #78ffd6, #78ffd6);
+}
+
+.error
+{
+    color: red;
+    width: 100%;
+    margin: 0.5rem 0 0 0;
+}
+.image
+{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    left: 50%;
+    height: 120px;
+}
+.image img{
+    position: relative;
+    transform: translate(-50%,0);
+    width: 40%;
+    height: 120px;
+}
+nav a {
+	position: absolute;
+  top: 50%;
+  left: 70%;
+  /* transform: translate(-50%,0); */
+	margin: 0;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+}
+
+
+
+.btn-effect a {
+	margin: 0 20px;
+	padding: 18px 20px;
+}
+
+.btn-effect a::before,
+.btn-effect a::after {
+  content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	opacity: 0.2;
+	transition: opacity 0.3s, height 0.3s;
+}
+
+.btn-effect a::after {
+	top: 100%;
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.3s;
+	transform: translateY(-10px);
+}
+
+.btn-effect a span:first-child {
+	z-index: 2;
+	display: block;
+	font-weight: 300;
+}
+
+.btn-effect a span:last-child {
+	z-index: 1;
+	display: block;
+	padding: 8px 0 0 0;
+	color: rgba(0,0,0,0.4);
+	text-shadow: none;
+	text-transform: none;
+	font-style: italic;
+	font-size: 0.75em;
+	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.3s;
+	transform: translateY(-100%);
+}
+
+.btn-effect a:hover::before,
+.btn-effect a:focus::before {
+	height: 6px;
+}
+
+.btn-effect a:hover::before,
+.btn-effect a:hover::after,
+.btn-effect a:focus::before,
+.btn-effect a:focus::after {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.btn-effect a:hover span:last-child,
+.btn-effect a:focus span:last-child {
+	opacity: 1;
+	transform: translateY(0%);
+}

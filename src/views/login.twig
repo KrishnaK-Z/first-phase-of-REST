@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+<style>
+  .grid
+  {
+      position: absolute;
+      top: 40%;
+      right: 30%;
+      transform:  translate(50%,-70%) ;
+  }
+
+  nav a {
+    top: 50%;
+    left: 15%;
+  }
+
+</style>
+</head>
+
+<body>
+
+<nav class="btn-effect">
+		<a href="#"><span>Join with us</span><span>Gateway to community</span></a>
+</nav>
+
+
+<form action="{{path_for('login-success-page')}}" method="POST" enctype="multipart/form-data" class="grid">
+
+
+<div class="grid_item full_part">
+<div class="input_label">E-Mail </div>
+<input type="email" name="user_email" class="input_box">
+<div class="error"></div>
+</div>
+
+<div class="grid_item full_part">
+<div class="input_label">Password </div>
+<input type="password" name="password" class="input_box">
+<div class="error"> </div></div>
+
+
+<div class="grid_item full_part" style="justify-content: center;">
+<button type="submit" name="logon" class="grid_item log_btn">Log On</button>
+</div>
+
+</form>
+
+</body>
+</html>

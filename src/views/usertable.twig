@@ -1,0 +1,22 @@
+{% extends "layouts/userTableLayout.twig" %}
+{% block content %}
+{% for result in results %}
+				<div class="grid__item" data-size="1280x1280">
+					<a href="{{ asset(result.profile_pic) }}" class="img-wrap"><img src="{{ asset(result.profile_pic) }}" alt="img07" /></a>
+						<div class="description description--grid">
+							<h3>{{ result.user_name }}</h3>
+							<p>{{ result.user_email }}</p>
+							<div class="details">
+								<ul>
+									<li> <span>{{ result.phone_number }}</span></li>
+									<li> <span>{{ result.role_id }}</span></li>
+									<li> <span>{{ result.street_address}}</span></li>
+									<li> <span>{{ result.area }}</span></li>
+									<li> <span>{{ result.pincode }}</span></li>
+								</ul>
+							</div>
+						</div>
+					</a>
+				</div>
+{% endfor %}
+{% endblock %}
